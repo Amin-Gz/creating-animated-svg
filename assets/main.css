@@ -1,0 +1,91 @@
+:root {
+  --gray: #ccc;
+  --magneta: #f06;
+}
+/* First SGV */
+.svg1hover {
+  stroke-dasharray: 57;
+  stroke-dashoffset: 57;
+  animation: 2.6s ease-in forwards like, 0.8s linear 2.6s 2 forwards beat;
+}
+.svg1NOThover {
+  stroke-dasharray: 57;
+  stroke-dashoffset: 57;
+  animation: 2.6s ease-in forwards unlike;
+}
+
+@keyframes like {
+  0% {
+    stroke-dashoffset: 57;
+    fill: var(--gray);
+  }
+  50% {
+    stroke-dashoffset: 0;
+    fill: var(--gray);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: var(--magneta);
+  }
+}
+
+@keyframes unlike {
+  0% {
+    stroke-dashoffset: 0;
+    fill: var(--magneta);
+  }
+  50% {
+    stroke-dashoffset: 0;
+    fill: var(--gray);
+  }
+  100% {
+    stroke-dashoffset: 57;
+    fill: var(--gray);
+  }
+}
+@keyframes beat {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(0.95, 0.95);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+/* Second SVG */
+.bgfixer {
+  background-image: radial-gradient(#e95d50 55%, #00000000 55%);
+}
+
+/* third SVG */
+.svg31 {
+  animation: 2s linear 2 forwards rotate;
+}
+.svg32 {
+  animation: 1s ease-out 4s forwards shows;
+}
+
+@keyframes rotate {
+  0% {
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+    visibility: hidden;
+  }
+}
+
+@keyframes shows {
+  0% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: visible;
+  }
+}
